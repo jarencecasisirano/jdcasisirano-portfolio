@@ -1,2 +1,2 @@
 # jdcasisirano-portfolio
-This is a portfolio webpage.
+This is a simple portfolio built with HTML, CSS, and JavaScript.
