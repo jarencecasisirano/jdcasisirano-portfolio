@@ -43,10 +43,7 @@ header .header-left a:hover {
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-right: 1.5em;
+    gap: 1em;
 }
 
 nav ul li a {
@@ -68,40 +65,208 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-/* Section Styling */
-section {
-    padding: 2em;
-    background: white;
+/* Page Title Styling */
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.page-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 0.5em auto;
+    border-radius: 2px;
+}
+
+/* About Me Page */
+.about-me {
+    max-width: 800px;
     margin: 2em auto;
+    padding: 20px;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section h1 {
-    color: #333;
+.about-me h2 {
+    font-size: 1.8rem;
     font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+.about-me h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.about-me p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.about-me ul {
+    margin: 10px 0 20px 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+.about-me ul li {
+    margin-bottom: 10px;
+}
+
+.education {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+}
+
+.education p {
+    margin: 5px 0;
+}
+
+/* Skills Page */
+.skills {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.skills ul {
+    margin: 10px 0 20px 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Projects Page */
+.project {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+.project p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.project ul {
+    margin: 10px 0 20px 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+.project ul li {
+    margin-bottom: 10px;
+}
+
+/* Publications */
+.publication {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007BFF;
+}
+
+.publication h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.publication p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.publication a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.publication a:hover {
+    color: #0056b3;
+}
+
+/* Homepage Styling */
+.home-intro {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f7f7fa, #eaecef);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-section ul {
-    list-style: disc;
-    margin: 1em 2em;
-    padding: 0;
-    line-height: 1.8;
+.home-intro h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-section ul li {
-    margin-bottom: 0.5em;
-    font-size: 1rem;
+.home-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 10px 0;
+    padding: 0 20px;
 }
 
-section p {
-    margin: 1em 2em;
-    line-height: 1.8;
-    font-size: 1rem;
-}
 
 /* Footer Styling */
 footer {
@@ -230,7 +395,7 @@ footer {
         gap: 0.5em;
     }
 
-    section {
+    .about-me, .skills, .project, .publication, .home-intro {
         padding: 1.5em;
     }
 
