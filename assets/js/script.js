@@ -44,13 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Dynamically load content into sections
-    loadContent('html/about-me.html', 'about-me', () => console.log('About Me loaded.'));
-    loadContent('html/projects.html', 'projects', () => console.log('Projects loaded.'));
-    loadContent('html/skills.html', 'skills', () => console.log('Skills loaded.'));
-    loadContent('html/footer.html', 'footer', () => console.log('Footer loaded.'));
+    // Dynamically load header
+    loadContent('header.html', 'header', () => {
+        console.log('Header loaded.');
+    });
 
-    // Load Contact Me splash screen dynamically and set up functionality
+    // Dynamically load footer
+    loadContent('footer.html', 'footer', () => {
+        console.log('Footer loaded.');
+    });
+
+    // Dynamically load Contact Me splash screen and set up its functionality
     loadContent('html/contact-me-splash.html', 'contact-splash-container', () => {
         console.log('Contact Me splash screen loaded.');
         setupSplash(); // Run the setup after the splash content is loaded
