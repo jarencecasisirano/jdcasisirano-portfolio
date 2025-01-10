@@ -45,17 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Dynamically load header
-    loadContent('header.html', 'header', () => {
+    loadContent('/html/header.html', 'header', () => {
         console.log('Header loaded.');
     });
 
     // Dynamically load footer
-    loadContent('footer.html', 'footer', () => {
+    loadContent('/html/footer.html', 'footer', () => {
         console.log('Footer loaded.');
     });
 
     // Dynamically load Contact Me splash screen and set up its functionality
-    loadContent('html/contact-me-splash.html', 'contact-splash-container', () => {
+    loadContent('/html/contact-me-splash.html', 'contact-splash-container', () => {
         console.log('Contact Me splash screen loaded.');
         setupSplash(); // Run the setup after the splash content is loaded
     });
