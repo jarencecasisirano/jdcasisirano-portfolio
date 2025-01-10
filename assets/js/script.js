@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Detect if running on GitHub Pages or locally
     const isGitHubPages = window.location.hostname.includes('github.io');
-    const basePath = isGitHubPages ? '/jd-casisirano-portfolio/' : '/';
+    const basePath = isGitHubPages ? '/jdcasisirano-portfolio/' : '/';
 
     // Function to dynamically load content into specific sections
     function loadContent(url, containerId, callback) {
