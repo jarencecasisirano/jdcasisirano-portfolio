@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio is ready!');
 
+    // Detect if running on GitHub Pages or locally
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/jd-casisirano-portfolio/' : '/';
+
     // Function to dynamically load content into specific sections
     function loadContent(url, containerId, callback) {
         fetch(url)
@@ -45,17 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Dynamically load header
-    loadContent('/html/header.html', 'header', () => {
+    loadContent(`${basePath}html/header.html`, 'header', () => {
         console.log('Header loaded.');
     });
 
     // Dynamically load footer
-    loadContent('/html/footer.html', 'footer', () => {
+    loadContent(`${basePath}html/footer.html`, 'footer', () => {
         console.log('Footer loaded.');
     });
 
     // Dynamically load Contact Me splash screen and set up its functionality
-    loadContent('/html/contact-me-splash.html', 'contact-splash-container', () => {
+    loadContent(`${basePath}html/contact-me-splash.html`, 'contact-splash-container', () => {
         console.log('Contact Me splash screen loaded.');
         setupSplash(); // Run the setup after the splash content is loaded
     });
