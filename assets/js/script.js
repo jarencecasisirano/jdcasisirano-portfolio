@@ -1,20 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio is ready!');
 
-    // Detect the base path dynamically
-    const isInHtmlFolder = window.location.pathname.includes('/html/');
-    const navLinks = document.querySelectorAll('nav a, .footer-links a');
-
-    // Adjust navigation links dynamically
-    navLinks.forEach(link => {
-        if (isInHtmlFolder && link.getAttribute('href').startsWith('html/')) {
-            // Prepend '../' to correct navigation links when in the /html/ folder
-            link.setAttribute('href', '../' + link.getAttribute('href'));
-        }
-    });
-
-    const basePath = isInHtmlFolder ? '../' : '';
-
     // Function to dynamically load content into specific sections
     function loadContent(url, containerId, callback) {
         fetch(url)
@@ -59,17 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Dynamically load header
-    loadContent(`${basePath}html/header.html`, 'header', () => {
+    loadContent('header.html', 'header', () => {
         console.log('Header loaded.');
     });
 
     // Dynamically load footer
-    loadContent(`${basePath}html/footer.html`, 'footer', () => {
+    loadContent('footer.html', 'footer', () => {
         console.log('Footer loaded.');
     });
 
     // Dynamically load Contact Me splash screen and set up its functionality
-    loadContent(`${basePath}html/contact-me-splash.html`, 'contact-splash-container', () => {
+    loadContent('contact-me-splash.html', 'contact-splash-container', () => {
         console.log('Contact Me splash screen loaded.');
         setupSplash(); // Run the setup after the splash content is loaded
     });
