@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="page-title">Project 1</h1>
+        <div class="container">
+            <section class="project-introduction">
+                <p>Welcome to the detailed page for <strong>Project 1</strong>. This page will showcase the geospatial applications related to environmental GIS and remote sensing workflows. You’ll find textual content, code snippets, and visual outputs such as maps, screenshots, or 3D visualizations created with QGIS, GEE, Python, R, Blender, and Aerialod.</p>
+            </section>
+
+            <section class="project-content">
+                <h2>Project Overview</h2>
+                <p>This project explores [brief summary of the project focus, e.g., mapping vegetation health using NDVI analysis].</p>
+
+                <h3>Tools Used</h3>
+                <p>This project utilized QGIS, Google Earth Engine (GEE), Python, R, and 3D software such as Blender and Aerialod to perform geospatial analysis and create visual outputs.</p>
+
+                <h3>Code Example</h3>
+                <pre><code class="language-python"># Example Python snippet
+import geopandas as gpd
+from rasterio.plot import show
+
+# Load and display a GeoTIFF
+data = gpd.read_file('example.shp')
+show(data)</code></pre>
+
+                <h3>Outputs</h3>
+                <p>Below are some of the outputs generated during this project:</p>
+                <img src="../assets/img/3d_bosnia_land_cover_final.png" alt="Example Output" class="project-image">
+                <figcaption>Figure 1: Example map output.</figcaption>
+
+                <h3>Conclusion</h3>
+                <p>The project demonstrates how geospatial analysis can be used to [state the key takeaway of the project].</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Contact Me Splash Container -->
+    <div id="contact-splash-container"></div>
+</body>
+</html>

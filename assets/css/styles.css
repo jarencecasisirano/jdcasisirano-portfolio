@@ -403,3 +403,132 @@ footer {
         padding: 1.5em 1em;
     }
 }
+
+/* Projects Page */
+.projects-container {
+    text-align: center;
+    margin: 2em auto;
+}
+
+.construction-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000; /* Bright red for emphasis */
+    background-color: #ffe6e6; /* Light red background for contrast */
+    padding: 1em;
+    border-radius: 8px;
+    margin: 1.5em auto;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.future-structure-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2em 0;
+    color: #333;
+}
+
+.future-structure-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.project-entry {
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    text-decoration: none; /* Remove underlining */
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.3s;
+}
+
+.project-entry:hover {
+    transform: scale(1.05); /* Add a subtle zoom-in effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance hover shadow */
+    color: #007BFF; /* Change text color on hover for clarity */
+}
+
+.project-entry h3 {
+    font-size: 1.5rem;
+    color: #333; /* Default text color */
+    margin-bottom: 0.5em;
+}
+
+.project-entry:hover h3 {
+    color: #007BFF; /* Highlight title on hover */
+}
+
+.project-entry p {
+    font-size: 1rem;
+    color: #777; /* Description color */
+}
+
+/* Project Page Enhancements */
+.project-introduction {
+    margin: 2em 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.project-content h2, .project-content h3 {
+    color: #007BFF;
+    margin-top: 1.5em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5em;
+}
+
+.project-content p {
+    margin-bottom: 1em;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+pre {
+    background: #f8f9fa;
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d6336c;
+}
+
+.project-image {
+    margin: 1em 0;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    background: #f9f9f9;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}

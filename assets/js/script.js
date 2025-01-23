@@ -1,62 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio is ready!');
 
-    // Function to dynamically load content into specific sections
     function loadContent(url, containerId, callback) {
-        fetch(url)
-            .then(response => response.text())
+        const basePath = window.location.pathname.includes('/projects/') ? '../' : '';
+        fetch(basePath + url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+                return response.text();
+            })
             .then(data => {
                 const container = document.getElementById(containerId);
                 if (container) {
-                    container.innerHTML = data; // Insert content into the corresponding section
-                    if (callback) callback(); // Ensure callback runs after content is added
+                    container.innerHTML = data;
+                    console.log(`Loaded ${url} into #${containerId}`);
+                    if (callback) callback();
                 } else {
                     console.error(`Container with id "${containerId}" not found.`);
                 }
             })
-            .catch(error => console.error('Error loading content:', error));
+            .catch(error => console.error(`Error loading ${url}:`, error));
     }
 
-    // Function to set up the Contact Me splash functionality
     function setupSplash() {
         const contactSplash = document.getElementById('contact-splash');
         const closeSplashButton = document.getElementById('close-splash');
-        const contactLinks = document.querySelectorAll('#contact-me-link'); // Select all "Contact Me" links
+        const contactLinks = document.querySelectorAll('[id="contact-me-link"]');
 
-        if (contactSplash && closeSplashButton) {
-            // Ensure splash screen is initially hidden
-            contactSplash.classList.add('hidden');
+        if (contactSplash) {
+            console.log('Splash screen found.');
+        } else {
+            console.error('Splash screen not found.');
+            return;
+        }
 
-            // Add click event listener to all "Contact Me" links
+        if (contactLinks.length > 0) {
+            console.log('Found Contact Me links:', contactLinks);
             contactLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    contactSplash.classList.remove('hidden'); // Show the splash screen
+                    contactSplash.classList.remove('hidden');
+                    console.log('Splash screen opened.');
                 });
             });
+        } else {
+            console.error('No Contact Me links found.');
+        }
 
-            // Hide splash screen when 'Close' button is clicked
+        if (closeSplashButton) {
             closeSplashButton.addEventListener('click', () => {
-                contactSplash.classList.add('hidden'); // Hide the splash screen
+                contactSplash.classList.add('hidden');
+                console.log('Splash screen closed.');
             });
         } else {
-            console.error('Splash screen elements not found.');
+            console.error('Close button not found.');
         }
     }
 
-    // Dynamically load header
     loadContent('header.html', 'header', () => {
         console.log('Header loaded.');
+        setupSplash();
     });
 
-    // Dynamically load footer
     loadContent('footer.html', 'footer', () => {
         console.log('Footer loaded.');
+        setupSplash();
     });
 
-    // Dynamically load Contact Me splash screen and set up its functionality
     loadContent('contact-me-splash.html', 'contact-splash-container', () => {
-        console.log('Contact Me splash screen loaded.');
-        setupSplash(); // Run the setup after the splash content is loaded
+        console.log('Contact Me splash loaded.');
+        setupSplash();
     });
 });
