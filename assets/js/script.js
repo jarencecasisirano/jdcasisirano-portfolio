@@ -2,23 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio is ready!');
 
     function loadContent(url, containerId, callback) {
-        const basePath = window.location.pathname.includes('/projects/') ? '../' : '';
-        fetch(basePath + url)
+        // Determine the relative path based on the current location
+        const isProjectPage = window.location.pathname.includes('/projects/');
+        const basePath = isProjectPage ? '../' : '';
+        const fullPath = `${basePath}${url}`;
+
+        fetch(fullPath)
             .then(response => {
-                if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+                if (!response.ok) throw new Error(`Failed to fetch ${fullPath}`);
                 return response.text();
             })
             .then(data => {
                 const container = document.getElementById(containerId);
                 if (container) {
-                    container.innerHTML = data;
-                    console.log(`Loaded ${url} into #${containerId}`);
+                    container.innerHTML = data; // Inject content into container
+                    console.log(`Loaded ${fullPath} into #${containerId}`);
                     if (callback) callback();
                 } else {
                     console.error(`Container with id "${containerId}" not found.`);
                 }
             })
-            .catch(error => console.error(`Error loading ${url}:`, error));
+            .catch(error => console.error(`Error loading ${fullPath}:`, error));
     }
 
     function setupSplash() {
@@ -56,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Load header, footer, and splash dynamically
     loadContent('header.html', 'header', () => {
         console.log('Header loaded.');
         setupSplash();
