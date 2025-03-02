@@ -1,5 +1,3 @@
-_**THIS IS A WORK IN PROGRESS!**_
-
 # My Portfolio
 
 Hi! I am **Jarence**. Good to see you here!
@@ -9,3 +7,5 @@ I am a `researcher, geospatial engineer/developer, and remote sensing scientist`
 I have a degree in engineering and am currently taking up my M. Sc. degree.
 
 Please feel free to browse through my work [here](https://jarencecasisirano.github.io/jdcasisirano-portfolio/)!
+
+_**THIS IS A WORK IN PROGRESS!**_
