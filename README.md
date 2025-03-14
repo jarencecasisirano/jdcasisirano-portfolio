@@ -8,4 +8,4 @@ I am a `researcher, geospatial engineer/developer, and remote sensing scientist`
 
 I have a degree in engineering and am currently taking up my M. Sc. degree.
 
-Please feel free to browse through my work [here](https://jarencecasisirano.github.io/jdcasisirano-portfolio/)!
+Please feel free to browse through my work [here](https://jareo.xyz)!
