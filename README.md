@@ -8,5 +8,4 @@ I have a degree in engineering and am currently taking up my M. Sc. degree.
 
 Please feel free to browse through my work [here](https://jareo.xyz)!
 
-_**THIS IS A WORK IN PROGRESS!**_
-
+_**THIS PORTFOLIO IS NOW DEPRECATED. PLEASE CHECK JAREO.XYZ!**_
