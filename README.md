@@ -8,4 +8,4 @@ I have a degree in engineering and am currently taking up my M. Sc. degree in ge
 
 Please feel free to browse through my work [here](https://jareo.xyz)!
 
-_**THIS PORTFOLIO IS NOW DEPRECATED. PLEASE CHECK JAREO.XYZ!**_
+_**THIS PORTFOLIO HAS NOW BEEN DISCONTINUED. PLEASE CHECK [JAREO.XYZ]([HTTP](https://jareo.xyz))!**_
